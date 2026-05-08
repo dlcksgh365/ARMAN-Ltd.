@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Sans+KR:wght@100..900&family=Montserrat:wght@700&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+    --font-heading: 'Inter', sans-serif;
+    --font-sans: 'Inter', 'Noto Sans KR', sans-serif;
+    --font-gotham: 'Montserrat', sans-serif;
+    
+    --color-navy: #001F3F;
+    --color-navy-light: #003366;
+    --color-navy-dark: #001122;
+    
+    --color-blue-accent: #0074D9;
+
+    --color-sidebar-ring: var(--sidebar-ring);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar: var(--sidebar);
+    --color-chart-5: var(--chart-5);
+    --color-chart-4: var(--chart-4);
+    --color-chart-3: var(--chart-3);
+    --color-chart-2: var(--chart-2);
+    --color-chart-1: var(--chart-1);
+    --color-ring: var(--ring);
+    --color-input: var(--input);
+    --color-border: var(--border);
+    --color-destructive: var(--destructive);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-accent: var(--accent);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-muted: var(--muted);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-secondary: var(--secondary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-primary: var(--primary);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-popover: var(--popover);
+    --color-card-foreground: var(--card-foreground);
+    --color-card: var(--card);
+    --color-foreground: var(--foreground);
+    --color-background: var(--background);
+    --radius-sm: calc(var(--radius) * 0.6);
+    --radius-md: calc(var(--radius) * 0.8);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) * 1.4);
+    --radius-2xl: calc(var(--radius) * 1.8);
+    --radius-3xl: calc(var(--radius) * 2.2);
+    --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+    color-scheme: light dark;
+    --background: #ffffff;
+    --foreground: #1a1a1a;
+    --card: #ffffff;
+    --card-foreground: #1a1a1a;
+    --popover: #ffffff;
+    --popover-foreground: #1a1a1a;
+    --primary: #001F3F;
+    --primary-foreground: #ffffff;
+    --secondary: #0074D9;
+    --secondary-foreground: #ffffff;
+    --muted: #f4f4f4;
+    --muted-foreground: #666666;
+    --accent: #f4f4f4;
+    --accent-foreground: #001F3F;
+    --destructive: #ef4444;
+    --border: #e5e5e5;
+    --input: #e5e5e5;
+    --ring: #0074D9;
+    --radius: 0rem;
+    --chart-1: #001F3F;
+    --chart-2: #0074D9;
+    --chart-3: #003366;
+    --chart-4: #001122;
+    --chart-5: #333333;
+    --sidebar: #ffffff;
+    --sidebar-foreground: #1a1a1a;
+    --sidebar-primary: #001F3F;
+    --sidebar-primary-foreground: #ffffff;
+    --sidebar-accent: #f4f4f4;
+    --sidebar-accent-foreground: #001F3F;
+    --sidebar-border: #e5e5e5;
+    --sidebar-ring: #0074D9;
+}
+
+.dark {
+    --background: #f9f9f9;
+    --foreground: #1a1a1a;
+    --card: #ffffff;
+    --card-foreground: #1a1a1a;
+    --popover: #ffffff;
+    --popover-foreground: #1a1a1a;
+    --primary: #001F3F;
+    --primary-foreground: #ffffff;
+    --secondary: #f4f4f4;
+    --secondary-foreground: #1a1a1a;
+    --muted: #f4f4f4;
+    --muted-foreground: #666666;
+    --accent: #f4f4f4;
+    --accent-foreground: #001F3F;
+    --destructive: #ef4444;
+    --border: #e5e5e5;
+    --input: #e5e5e5;
+    --ring: #0074D9;
+}
+
+/* Logo Filters */
+.logo-white {
+  filter: brightness(0) invert(1);
+}
+
+.logo-navy {
+  filter: brightness(0) saturate(100%) invert(11%) sepia(21%) saturate(5428%) hue-rotate(213deg) brightness(96%) contrast(101%);
+}
+
+/* Support for browsers that only use system preference without .dark class */
+@media (prefers-color-scheme: dark) {
+  .logo-white {
+    filter: brightness(0) invert(1);
+  }
+  .logo-navy {
+    filter: brightness(0) saturate(100%) invert(11%) sepia(21%) saturate(5428%) hue-rotate(213deg) brightness(96%) contrast(101%);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    }
+  body {
+    @apply bg-background text-foreground;
+    }
+  html {
+    @apply font-sans;
+    }
+}
