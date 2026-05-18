@@ -21,6 +21,9 @@ export default function DistributionPage() {
             src="/iran-mashhad.png"
             alt="Local Distribution"
             className="w-full h-full object-cover"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
             referrerPolicy="no-referrer"
           />
         </div>
@@ -55,8 +58,8 @@ export default function DistributionPage() {
               </p>
             </motion.div>
             <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="relative h-[400px] bg-muted overflow-hidden"
             >
@@ -64,6 +67,8 @@ export default function DistributionPage() {
                 src="/iran local.jpg"
                 alt="Warehouse"
                 className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
                 referrerPolicy="no-referrer"
               />
             </motion.div>

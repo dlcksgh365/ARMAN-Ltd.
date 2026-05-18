@@ -28,6 +28,9 @@ export default function EngineeringPage() {
             src="/m1.png"
             alt="Mold Engineering"
             className="w-full h-full object-cover"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
             referrerPolicy="no-referrer"
           />
         </div>
@@ -65,8 +68,8 @@ export default function EngineeringPage() {
             
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
               <motion.div 
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 className="aspect-[4/3] bg-muted overflow-hidden"
               >
@@ -74,12 +77,14 @@ export default function EngineeringPage() {
                   src="/g1.png" 
                   alt="Engineering Image 1" 
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" 
+                  loading="lazy"
+                  decoding="async"
                   referrerPolicy="no-referrer" 
                 />
               </motion.div>
               <motion.div 
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
                 className="aspect-[4/3] bg-muted overflow-hidden"
@@ -88,12 +93,14 @@ export default function EngineeringPage() {
                   src="/g2.png" 
                   alt="Engineering Image 2" 
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" 
+                  loading="lazy"
+                  decoding="async"
                   referrerPolicy="no-referrer" 
                 />
               </motion.div>
               <motion.div 
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
                 className="aspect-[4/3] bg-muted overflow-hidden"
@@ -102,12 +109,14 @@ export default function EngineeringPage() {
                   src="/g3.png" 
                   alt="Engineering Image 3" 
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" 
+                  loading="lazy"
+                  decoding="async"
                   referrerPolicy="no-referrer" 
                 />
               </motion.div>
               <motion.div 
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.3 }}
                 className="aspect-[4/3] bg-muted overflow-hidden"
@@ -116,6 +125,8 @@ export default function EngineeringPage() {
                   src="/g4.png" 
                   alt="Engineering Image 4" 
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" 
+                  loading="lazy"
+                  decoding="async"
                   referrerPolicy="no-referrer" 
                 />
               </motion.div>
@@ -167,8 +178,8 @@ export default function EngineeringPage() {
           <div className="mt-32">
             <h2 className="text-3xl font-bold text-navy mb-12 text-center">{t("engineeringPage.partnerTitle")}</h2>
             <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="max-w-4xl mx-auto p-8 bg-blue-accent/5 border border-blue-accent/10"
             >
@@ -189,6 +200,8 @@ export default function EngineeringPage() {
                     src="/t1.png" 
                     alt="Partner Facility 1" 
                     className="w-full h-full object-cover" 
+                    loading="lazy"
+                    decoding="async"
                     referrerPolicy="no-referrer" 
                   />
                 </div>
@@ -197,6 +210,8 @@ export default function EngineeringPage() {
                     src="/t2.png" 
                     alt="Partner Facility 2" 
                     className="w-full h-full object-cover" 
+                    loading="lazy"
+                    decoding="async"
                     referrerPolicy="no-referrer" 
                   />
                 </div>

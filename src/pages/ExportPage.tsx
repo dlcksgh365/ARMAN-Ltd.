@@ -21,6 +21,9 @@ export default function ExportPage() {
             src="/kbeauty.png"
             alt="K-Beauty"
             className="w-full h-full object-cover"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
             referrerPolicy="no-referrer"
           />
         </div>
@@ -56,10 +59,10 @@ export default function ExportPage() {
             </motion.div>
             <div className="grid grid-cols-2 gap-4">
               <div className="aspect-square bg-muted overflow-hidden">
-                <img src="/skin1004.png" alt="Skin1004" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                <img src="/skin1004.png" alt="Skin1004" className="w-full h-full object-cover" loading="lazy" decoding="async" referrerPolicy="no-referrer" />
               </div>
               <div className="aspect-square bg-muted overflow-hidden mt-8">
-                <img src="/numbuzin.png" alt="Numbuzin" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                <img src="/numbuzin.png" alt="Numbuzin" className="w-full h-full object-cover" loading="lazy" decoding="async" referrerPolicy="no-referrer" />
               </div>
             </div>
           </div>

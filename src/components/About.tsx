@@ -40,16 +40,18 @@ export function About() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="aspect-square rounded-none overflow-hidden shadow-2xl">
+            <div className="aspect-square rounded-none overflow-hidden shadow-2xl bg-muted">
               <img
                 src="/KI.png"
                 alt="Modern Office Building"
                 className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
                 referrerPolicy="no-referrer"
               />
             </div>

@@ -21,6 +21,9 @@ export default function ImportPage() {
             src="/SP.png"
             alt="Premium Imports"
             className="w-full h-full object-cover"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
             referrerPolicy="no-referrer"
           />
         </div>
@@ -56,10 +59,10 @@ export default function ImportPage() {
             </motion.div>
             <div className="grid grid-cols-2 gap-4">
               <div className="aspect-square bg-muted overflow-hidden rounded-full">
-                <img src="/saffron.jpg" alt="Saffron" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                <img src="/saffron.jpg" alt="Saffron" className="w-full h-full object-cover" loading="lazy" decoding="async" referrerPolicy="no-referrer" />
               </div>
               <div className="aspect-square bg-muted overflow-hidden rounded-full mt-12">
-                <img src="/pistachio.png" alt="Pistachio" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                <img src="/pistachio.png" alt="Pistachio" className="w-full h-full object-cover" loading="lazy" decoding="async" referrerPolicy="no-referrer" />
               </div>
             </div>
           </div>

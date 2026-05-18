@@ -10,24 +10,25 @@ export function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 bg-navy">
         <img
           src="/5322.png"
           alt="Cargo Ship Logistics"
           className="w-full h-full object-cover"
           loading="eager"
           fetchPriority="high"
+          decoding="async"
           referrerPolicy="no-referrer"
         />
         <div className="absolute inset-0 bg-black/30" />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-3xl bg-white/10 backdrop-blur-sm p-8 md:py-16 md:px-12 border-s-4 border-blue-accent">
+        <div className="max-w-3xl bg-white/10 md:backdrop-blur-sm p-8 md:py-16 md:px-12 border-s-4 border-blue-accent">
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <p className="text-white/90 font-medium mb-4 tracking-wide uppercase text-sm flex items-center gap-2 break-keep">
               <Ship className="w-4 h-4" /> {t("hero.badge")}

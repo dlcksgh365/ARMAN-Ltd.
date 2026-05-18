@@ -30,6 +30,9 @@ export default function AboutPage() {
             src="/c1.jpg"
             alt="Office"
             className="w-full h-full object-cover"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
             referrerPolicy="no-referrer"
           />
         </div>
@@ -65,8 +68,8 @@ export default function AboutPage() {
               </p>
             </motion.div>
             <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="aspect-video bg-muted overflow-hidden shadow-xl"
             >
@@ -74,6 +77,8 @@ export default function AboutPage() {
                 src="/KI.png"
                 alt="Office"
                 className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
                 referrerPolicy="no-referrer"
               />
             </motion.div>
@@ -99,7 +104,7 @@ export default function AboutPage() {
 
           {/* Distribution Map Image */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="mb-24 overflow-hidden"
@@ -109,6 +114,8 @@ export default function AboutPage() {
                 src="/map.png" 
                 alt="Distribution Network Map" 
                 className="max-w-full h-auto" 
+                loading="lazy"
+                decoding="async"
                 referrerPolicy="no-referrer"
               />
             </div>
