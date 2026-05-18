@@ -24,7 +24,7 @@ export function Hero() {
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-3xl bg-white/10 md:backdrop-blur-sm p-8 md:py-16 md:px-12 border-s-4 border-blue-accent">
+        <div className="max-w-3xl bg-white/10 backdrop-blur-sm p-8 md:py-16 md:px-12 border-s-4 border-blue-accent">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
