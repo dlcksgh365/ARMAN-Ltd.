@@ -76,10 +76,10 @@ export function Navbar({ onInquiryClick }: { onInquiryClick: () => void }) {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center gap-2">
           <Link to="/" className="flex items-center gap-2">
-            <div className="relative w-22 h-22 md:w-16 md:h-16 transition-all duration-300">
+            <div className="relative w-14 h-14 md:w-16 md:h-16 transition-all duration-300">
               <img 
                 src="/armanlogo.png" 
-                alt="ARMAN Ltd. Logo" 
+                alt="ARMAN LLC Logo" 
                 className={cn(
                   "absolute inset-0 w-full h-full object-contain transition-opacity duration-300 logo-white",
                   isScrolled || !isHomePage ? "opacity-0" : "opacity-100"
@@ -88,7 +88,7 @@ export function Navbar({ onInquiryClick }: { onInquiryClick: () => void }) {
               />
               <img 
                 src="/armanlogo.png" 
-                alt="ARMAN Ltd. Logo" 
+                alt="ARMAN LLC Logo" 
                 className={cn(
                   "absolute inset-0 w-full h-full object-contain transition-opacity duration-300 logo-navy",
                   isScrolled || !isHomePage ? "opacity-100" : "opacity-0"
@@ -98,10 +98,10 @@ export function Navbar({ onInquiryClick }: { onInquiryClick: () => void }) {
             </div>
             <div className="flex items-center">
               <div className={cn(
-                "font-gotham font-bold text-2xl leading-none transition-colors duration-300 break-keep flex items-baseline",
+                "font-gotham font-bold text-lg md:text-2xl leading-none transition-colors duration-300 break-keep flex items-baseline",
                 isScrolled || !isHomePage ? "text-navy" : "text-white"
               )}>
-                <span className="tracking-[0.15em] mr-2">ARMAN</span>
+                <span className="tracking-[0.15em] mr-1.5 md:mr-2">ARMAN</span>
                 <span className="text-[0.6em] font-medium tracking-normal opacity-80">LLC</span>
               </div>
             </div>

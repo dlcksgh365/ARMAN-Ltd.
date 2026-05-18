@@ -16,11 +16,11 @@ export function Footer() {
               <img 
                 src="/armanlogo.png" 
                 alt="ARMAN LLC Logo" 
-                className="w-18 h-18 md:w-14 md:h-14 object-contain transition-all duration-300 logo-white"
+                className="w-12 h-12 md:w-14 md:h-14 object-contain transition-all duration-300 logo-white"
                 referrerPolicy="no-referrer"
               />
-              <div className="flex items-baseline font-bold text-xl break-keep">
-                <span className="tracking-[0.15em] mr-2">ARMAN</span>
+              <div className="flex items-baseline font-bold text-lg md:text-xl break-keep">
+                <span className="tracking-[0.15em] mr-1.5 md:mr-2">ARMAN</span>
                 <span className="text-[0.6em] font-medium tracking-normal opacity-80">LLC</span>
               </div>
             </div>
