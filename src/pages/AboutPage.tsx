@@ -27,7 +27,7 @@ export default function AboutPage() {
       <section className="relative h-[40vh] flex items-center overflow-hidden bg-navy">
         <div className="absolute inset-0 opacity-30">
           <img
-            src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000"
+            src="/c1.jpg"
             alt="Office"
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
@@ -80,7 +80,7 @@ export default function AboutPage() {
           </div>
 
           {/* Features Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-24">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
@@ -96,6 +96,23 @@ export default function AboutPage() {
               </motion.div>
             ))}
           </div>
+
+          {/* Distribution Map Image */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-24 overflow-hidden"
+          >
+            <div className="relative w-full flex justify-center">
+              <img 
+                src="/map.png" 
+                alt="Distribution Network Map" 
+                className="max-w-full h-auto" 
+                referrerPolicy="no-referrer"
+              />
+            </div>
+          </motion.div>
 
           {/* Values Section */}
           <div className="bg-navy p-12 md:p-20 text-white">

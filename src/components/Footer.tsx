@@ -20,11 +20,11 @@ export function Footer() {
                 referrerPolicy="no-referrer"
               />
               <div className="flex items-baseline font-bold text-lg md:text-xl break-keep">
-                <span className="tracking-[0.15em] mr-1.5 md:mr-2">ARMAN</span>
+                <span className="tracking-[0.15em] me-1.5 md:me-2">ARMAN</span>
                 <span className="text-[0.6em] font-medium tracking-normal opacity-80">LLC</span>
               </div>
             </div>
-            <p className="text-white/60 text-sm leading-relaxed break-keep whitespace-pre-line">
+            <p className="text-white/60 text-sm leading-relaxed break-keep whitespace-pre-line text-start">
               {t("footer.description")}
             </p>
             <div className="flex gap-4">
@@ -70,10 +70,6 @@ export function Footer() {
                 +82 10-5294-1935
               </li>
               <li className="flex items-center gap-3">
-                <Phone className="w-4 h-4 text-blue-accent" />
-                +82 70-7677-1935
-              </li>
-              <li className="flex items-center gap-3">
                 <Send className="w-4 h-4 text-blue-accent" />
                 @ARMAN_korea
               </li>
@@ -82,8 +78,12 @@ export function Footer() {
                 arman3652023@gmail.com
               </li>
               <li className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-blue-accent mt-1" />
-                <span className="break-keep">{t("contact.addressValue")}</span>
+                <MapPin className="w-4 h-4 text-blue-accent mt-1 shrink-0" />
+                <span className="break-keep"><span className="text-white/80 font-semibold">{t("contact.addressKR")}:</span> {t("contact.addressValue")}</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <MapPin className="w-4 h-4 text-blue-accent mt-1 shrink-0" />
+                <span className="break-keep"><span className="text-white/80 font-semibold">{t("contact.addressIR")}:</span> {t("contact.addressValueIran")}</span>
               </li>
             </ul>
           </div>

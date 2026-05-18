@@ -61,6 +61,18 @@ export function Navbar({ onInquiryClick }: { onInquiryClick: () => void }) {
       >
         KO
       </button>
+      <span className={cn("opacity-30", isScrolled || !isHomePage ? "text-navy" : "text-white")}>|</span>
+      <button
+        onClick={() => setLanguage("fa")}
+        className={cn(
+          "transition-all duration-300 hover:text-blue-accent",
+          language === "fa" 
+            ? (isScrolled || !isHomePage ? "text-navy" : "text-white") 
+            : "text-muted-foreground/60"
+        )}
+      >
+        FA
+      </button>
     </div>
   );
 
@@ -101,7 +113,7 @@ export function Navbar({ onInquiryClick }: { onInquiryClick: () => void }) {
                 "font-gotham font-bold text-lg md:text-2xl leading-none transition-colors duration-300 break-keep flex items-baseline",
                 isScrolled || !isHomePage ? "text-navy" : "text-white"
               )}>
-                <span className="tracking-[0.15em] mr-1.5 md:mr-2">ARMAN</span>
+                <span className="tracking-[0.15em] me-1.5 md:me-2">ARMAN</span>
                 <span className="text-[0.6em] font-medium tracking-normal opacity-80">LLC</span>
               </div>
             </div>
@@ -135,7 +147,7 @@ export function Navbar({ onInquiryClick }: { onInquiryClick: () => void }) {
                              to={item.href}
                              className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-transparent focus:text-blue-accent"
                            >
-                             <div className="text-[15px] font-semibold leading-none break-keep">{item.title}</div>
+                             <div className="text-[15px] font-semibold leading-none break-keep text-start">{item.title}</div>
                            </Link>
                         </NavigationMenuLink>
                       </li>
@@ -158,7 +170,7 @@ export function Navbar({ onInquiryClick }: { onInquiryClick: () => void }) {
           <Button 
             variant="default" 
             className={cn(
-              "rounded-none px-8 py-6 text-base font-bold ml-2 transition-colors duration-300",
+              "rounded-none px-8 py-6 text-base font-bold ms-2 transition-colors duration-300",
               isScrolled || !isHomePage 
                 ? "bg-navy hover:bg-navy-light text-white" 
                 : "bg-white hover:bg-white/90 text-navy"

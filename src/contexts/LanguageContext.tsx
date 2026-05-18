@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { translations } from '@/lib/translations';
 
-type Language = 'en' | 'ko';
+type Language = 'en' | 'ko' | 'fa';
 
 interface LanguageContextType {
   language: Language;
@@ -20,6 +20,7 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
   useEffect(() => {
     localStorage.setItem('app-language', language);
     document.documentElement.lang = language;
+    document.documentElement.dir = language === 'fa' ? 'rtl' : 'ltr';
   }, [language]);
 
   useEffect(() => {

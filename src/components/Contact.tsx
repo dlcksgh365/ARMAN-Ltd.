@@ -74,8 +74,15 @@ export function Contact({ onInquiryClick }: { onInquiryClick: () => void }) {
               <div className="flex items-start gap-4">
                 <MapPin className="w-5 h-5 text-blue-accent mt-1" />
                 <div>
-                  <p className="font-bold text-navy break-keep">{t("contact.address")}</p>
+                  <p className="font-bold text-navy break-keep">{t("contact.addressKR")}</p>
                   <p className="text-muted-foreground text-sm break-keep">{t("contact.addressValue")}</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <MapPin className="w-5 h-5 text-blue-accent mt-1" />
+                <div>
+                  <p className="font-bold text-navy break-keep">{t("contact.addressIR")}</p>
+                  <p className="text-muted-foreground text-sm break-keep">{t("contact.addressValueIran")}</p>
                 </div>
               </div>
             </div>

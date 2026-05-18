@@ -8,20 +8,22 @@ export function Hero() {
   const { t } = useLanguage();
 
   return (
-    <section id="home" className="relative min-h-[95vh] flex items-center pt-20 overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
           src="/5322.png"
           alt="Cargo Ship Logistics"
           className="w-full h-full object-cover"
+          loading="eager"
+          fetchPriority="high"
           referrerPolicy="no-referrer"
         />
         <div className="absolute inset-0 bg-black/30" />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-3xl bg-white/10 backdrop-blur-sm p-8 md:py-16 md:px-12 border-l-4 border-blue-accent">
+        <div className="max-w-3xl bg-white/10 backdrop-blur-sm p-8 md:py-16 md:px-12 border-s-4 border-blue-accent">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -41,7 +43,7 @@ export function Hero() {
               <Link to="/about">
                 <Button size="lg" className="bg-blue-accent hover:bg-blue-accent/90 text-white rounded-none px-8 group">
                   {t("hero.cta")}
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="ms-2 w-4 h-4 group-hover:translate-x-1 rtl:group-hover:-translate-x-1 transition-transform" />
                 </Button>
               </Link>
             </div>
